@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Title from './components/Title'
 import Scoreboard from './components/Scoreboard'
@@ -13,8 +12,6 @@ function App() {
         <Scoreboard content='Scoreboard' />
         </main>
       </header>
-
-      
     </div>
   );
 }

@@ -37,12 +37,6 @@ export default class AddPlayer extends Component {
                 onChange={e => this.setState({ name: e.target.value })}
                 value={this.state.name}
               />
-              <input
-                type="text"
-                name="email"
-                onChange={e => this.setState({ name: e.target.value })}
-                value={this.state.name}
-              />
             </label>
             <input type="submit" value="Add" />
           </form>

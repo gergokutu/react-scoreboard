@@ -17,8 +17,9 @@ export default class Player extends Component {
   render() {
     return (
       <div className="player">
+        <p className="id">ID: { this.props.id }</p>
         <p className="name">Name: { this.props.name }</p>
-        <p className="name">Score: { this.props.score }</p>
+        <p className="score">Score: { this.props.score }</p>
         <button className="plus-button" onClick={this.handleClick}>Add +1</button>
       </div>
     )
