@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Player from "./Player";
+import React, { Component } from "react"
+import Player from "./Player"
 
 export default class Scoreboard extends Component {
   state = {
@@ -10,11 +10,24 @@ export default class Scoreboard extends Component {
       ]
   }
 
-  render() { 
+  render() {
+    const players_copy = [ ...this.state.players ]
+    players_copy.sort((a, b) => b.score - a.score)   
     return (
       <div className="scoreboard">
-          {this.state.players.map(player => <Player name={player.name} score={player.score}/>)}
+          {players_copy.map(this.renderPlayer)}
       </div>
+    )
+  }
+
+  renderPlayer = player => {
+    return (
+      <Player
+        id={player.id}
+        name={player.name}
+        score={player.score}
+        key={player.id}
+      />
     )
   }
 }

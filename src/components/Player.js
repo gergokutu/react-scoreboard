@@ -9,8 +9,8 @@ export default class Player extends Component {
   render() {
     return (
       <div className="player">
-        <p className="name">{ this.props.name }</p>
-        <p className="name">{ this.props.score }</p>
+        <p className="name">Name: { this.props.name }</p>
+        <p className="name">Score: { this.props.score }</p>
       </div>
     )
   }
