@@ -1,0 +1,10 @@
+.player {
+    margin: 10px;
+    border: 1px double yellow;
+}
+
+[type='text'] {
+    margin: 4px;
+    width: 50%;
+    min-width: 90px;
+}

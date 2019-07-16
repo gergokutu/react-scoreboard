@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Player from "./Player"
 import Addplayer from "./AddPlayer"
+import './Scoreboard.css';
 
 export default class Scoreboard extends Component {
   state = {

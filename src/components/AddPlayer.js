@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './AddPlayer.css'
 
 export default class AddPlayer extends Component {
     state = {name:''}
@@ -29,7 +30,6 @@ export default class AddPlayer extends Component {
                 onChange={e => this.setState({ name: e.target.value })}
                 value={this.state.name}
               />
-            
             </label>
             <input type="submit" value="Add" />
           </form>

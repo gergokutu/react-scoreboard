@@ -18,3 +18,9 @@ body, input {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.Scoreboard-style {
+  padding: 10px;
+  border: 4px dotted wheat;
+  min-width: 35%;
+}

@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Title content='Game X' />
-        <main>
+        <main className='Scoreboard-style'>
         <Scoreboard content='Scoreboard' />
-      </main>
+        </main>
       </header>
 
       
