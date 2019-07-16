@@ -7,6 +7,7 @@ export default class AddPlayer extends Component {
     handleSubmit = (event) => {
       event.preventDefault()
       this.props.addPlayer(this.state.name)
+      this.setState({name: ''})
     }
     
     // // not necessary because it's handeled...
@@ -15,6 +16,12 @@ export default class AddPlayer extends Component {
     //   console.log(event, event.target, event.target.name)
     //   this.setState({
     //     name: event.target.value
+    //   })
+    // }
+    // // generic solution
+    // handleChange = (event) => {
+    //   this.setState({
+    //     [event.target.name]: event.target.value
     //   })
     // }
   
@@ -27,6 +34,12 @@ export default class AddPlayer extends Component {
               <input
                 type="text"
                 name="name"
+                onChange={e => this.setState({ name: e.target.value })}
+                value={this.state.name}
+              />
+              <input
+                type="text"
+                name="email"
                 onChange={e => this.setState({ name: e.target.value })}
                 value={this.state.name}
               />
