@@ -23,7 +23,7 @@ export default class AddPlayer extends Component {
         <div className="add-player">
           <form onSubmit={this.handleSubmit}>
             <label>
-              Name:
+              <span>Name:</span>
               <input
                 type="text"
                 name="name"
