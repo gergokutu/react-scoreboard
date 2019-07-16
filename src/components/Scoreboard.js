@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Player from "./Player"
+import Addplayer from "./AddPlayer"
 
 export default class Scoreboard extends Component {
   state = {
@@ -12,10 +13,12 @@ export default class Scoreboard extends Component {
 
   render() {
     const players_copy = [ ...this.state.players ]
-    players_copy.sort((a, b) => b.score - a.score)   
+    players_copy.sort((a, b) => b.score - a.score)  
     return (
       <div className="scoreboard">
-          {players_copy.map(this.renderPlayer)}
+          <h2>{this.props.content}</h2>
+          <p>{players_copy.map(this.renderPlayer)}</p>
+          <Addplayer addPlayer={this.addPlayer}/>
       </div>
     )
   }
@@ -31,6 +34,24 @@ export default class Scoreboard extends Component {
       />
     )
   }
+
+//   // shorter
+//   render () {
+//     return (
+//       <div className="scoreboard">
+//         <h1>Scoreboard</h1>
+//         <ul>
+//           {
+//             [ ...this.state.players ]
+//             .sort((a, b) => b.score - a.score)
+//             .map(player => (
+//               <Player {...player} key={player.id} />
+//             ))
+//           }
+//         </ul>
+//       </div>
+//     );
+//   }
 
   incrementScoreOfPlayer = (id) => {
     // Making a new array with the same objects except for the
@@ -55,6 +76,17 @@ export default class Scoreboard extends Component {
     //         : player
     //     ))
     //   });
+  }
+
+  addPlayer = (name) => {
+    const player = {
+      id: Math.round(Math.random()*100000),
+      name,
+      score: 0
+    }
+    this.setState({
+      players: this.state.players.concat(player)
+    })
   }
 
 }

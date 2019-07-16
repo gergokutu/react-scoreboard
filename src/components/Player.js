@@ -18,7 +18,7 @@ export default class Player extends Component {
       <div className="player">
         <p className="name">Name: { this.props.name }</p>
         <p className="name">Score: { this.props.score }</p>
-        <button className="plus-button" onClick={this.handleClick}>Increment Score</button>
+        <button className="plus-button" onClick={this.handleClick}>Add +1</button>
       </div>
     )
   }
